@@ -35,7 +35,7 @@
                 </div>
                 <div class="space-x-2 text-[rgba(17,17,17,0.7)] text-xl font-semibold ">
                     <img class="mr-3" src="assets/coin.png" alt="">
-                    <div>5500</div>
+                    <div id="balance">55000</div>
                     <p>BDT</p>
                 </div>
             </div>
@@ -43,9 +43,11 @@
         <!-- button -->
         <div class="text-center mt-20 space-x-5 ">
             <button id="btn-donate"
-                class="btn bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] text-xl w-[200px] font-bold h-[60px] " onclick="toggleButtons('btn-donate')">Donation</button>
+                class="btn bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] text-xl w-[200px] font-bold h-[60px] "
+                onclick="toggleButtons('btn-donate')">Donation</button>
             <button id="btn-history"
-                class="btn border border-[rgba(17,17,17,0.3)] bg-white  text-xl w-[200px] font-bold h-[60px] text-[rgba(17,17,17,0.7)]" onclick="toggleButtons('btn-history')">History</button>
+                class="btn  bg-white  text-xl w-[200px] font-bold h-[60px] text-[rgba(17,17,17,0.7)]"
+                onclick="toggleButtons('btn-history')">History</button>
         </div>
     </header>
     <main class="min-h-screen">
@@ -58,9 +60,9 @@
                 </figure>
                 <div class="card-body w-2/4 space-y-3 ">
                     <div
-                        class="space-x-1 text-[rgba(17,17,17,0.7)]  font-semibold flex items-center bg-[rgba(17,17,17,0.05)] w-2/12 rounded-lg py-2 px-3 ">
+                        class="space-x-1 text-[rgba(17,17,17,0.7)] font-semibold flex items-center bg-[rgba(17,17,17,0.05)] w-1/5 rounded-lg py-2 px-3 ">
                         <img class="mr-1 w-2/6" src="assets/coin.png" alt="">
-                        <div>0</div>
+                        <div class="card-value">0</div>
                         <p>BDT</p>
                     </div>
                     <h3 class="font-extrabold text-xl ">Donate for Flood at Noakhali, Bangladesh</h3>
@@ -72,7 +74,7 @@
                         ever.</p>
                     <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
                     <button id="donate-now"
-                        class="btn btn-block bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] font-bold text-xl">Donate
+                        class="btn btn-block bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] font-bold text-xl donate-now">Donate
                         Now</button>
                 </div>
             </div>
@@ -83,9 +85,9 @@
                 </figure>
                 <div class="card-body w-2/4 space-y-3 ">
                     <div
-                        class="space-x-1 text-[rgba(17,17,17,0.7)]  font-semibold flex items-center bg-[rgba(17,17,17,0.05)] w-2/12 rounded-lg py-2 px-3 ">
+                        class="space-x-1 text-[rgba(17,17,17,0.7)]  font-semibold flex items-center bg-[rgba(17,17,17,0.05)] w-1/5 rounded-lg py-2 px-3 ">
                         <img class="mr-1 w-2/6" src="assets/coin.png" alt="">
-                        <div>0</div>
+                        <div class="card-value">0</div>
                         <p>BDT</p>
                     </div>
                     <h3 class="font-extrabold text-xl ">Donate for Flood Relief in Feni,Bangladesh</h3>
@@ -99,7 +101,7 @@
                     </p>
                     <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
                     <button id="donate-now"
-                        class="btn btn-block bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] font-bold text-xl">Donate
+                        class="btn btn-block bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] font-bold text-xl donate-now">Donate
                         Now</button>
                 </div>
             </div>
@@ -110,9 +112,9 @@
                 </figure>
                 <div class="card-body w-2/4 space-y-3 ">
                     <div
-                        class="space-x-1 text-[rgba(17,17,17,0.7)]  font-semibold flex items-center bg-[rgba(17,17,17,0.05)] w-2/12 rounded-lg py-2 px-3 ">
+                        class="space-x-1 text-[rgba(17,17,17,0.7)]  font-semibold flex items-center bg-[rgba(17,17,17,0.05)] w-1/5 rounded-lg py-2 px-3 ">
                         <img class="mr-1 w-2/6" src="assets/coin.png" alt="">
-                        <div>0</div>
+                        <div class="card-value">0</div>
                         <p>BDT</p>
                     </div>
                     <h3 class="font-extrabold text-xl ">Aid for Injured in the Quota Movement</h3>
@@ -124,9 +126,9 @@
                         donation brings relief and a step closer to recovery.This is your chance to make a meaningful
                         impact on the lives of those who risked their safety for a fairer future. Together, we can
                         ensure that these individuals receive the care they need to recover fully.</p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-                    <button id="donate-now"
-                        class="btn btn-block bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] font-bold text-xl">Donate
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full  " />
+                    <button
+                        class="btn btn-block bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] font-bold text-xl donate-now">Donate
                         Now</button>
                 </div>
             </div>
@@ -139,8 +141,9 @@
     </main>
     <footer class="bg-[rgb(249,247,243)] h-32">
     </footer>
-    <script src="JS/main.js"></script>
+
     <script src="JS/utilities.js"></script>
+    <script src="JS/main.js"></script>
     <script src="JS/features.js"></script>
 </body>
 
