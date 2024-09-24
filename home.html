@@ -21,12 +21,12 @@
 </head>
 
 <body>
-    <header>
+    <header id="stickySection" class="sticky top-0 left-0 w-full bg-transparent transition-all duration-300 z-50 pb-5">
         <!-- nav -->
         <div class=" bg-[rgb(249,247,243)] h-32 flex items-start ">
             <div class=" navbar flex justify-around items-center w-full mt-2 ">
                 <div class="">
-                    <button
+                    <button id="btn-blog"
                         class="btn bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] text-xl w-[100px] font-bold ">Blog</button>
                 </div>
                 <div class=" space-x-3 flex items-center">
@@ -44,13 +44,13 @@
         <div class="text-center mt-20 space-x-5 ">
             <button
                 class="btn bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] text-xl w-[200px] font-bold h-[60px] ">Donation</button>
-            <button
+            <button id="btn-history"
                 class="btn border border-[rgba(17,17,17,0.3)] bg-white hover:bg-[rgb(158,214,85)] text-xl w-[200px] font-bold h-[60px] text-[rgba(17,17,17,0.7)]">History</button>
         </div>
     </header>
     <main>
         <!-- donate cards -->
-        <div class="max-w-screen-xl mx-auto mt-10 mb-20 space-y-9">
+        <div id="donate" class="max-w-screen-xl mx-auto mt-10 mb-20 space-y-9">
             <!-- card1 -->
             <div class="card lg:card-side bg-base-100  px-8    border border-[rgba(17,17,17,0.1)]">
                 <figure>
@@ -131,9 +131,15 @@
                 </div>
             </div>
         </div>
+
+        <!-- history -->
+         <section id="history hidden">
+
+         </section>
     </main>
     <footer class="bg-[rgb(249,247,243)] h-32">
     </footer>
+    <script src="./JS/main.js"></script>
 </body>
 
 </html>
