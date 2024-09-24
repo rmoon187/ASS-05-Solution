@@ -33,6 +33,7 @@ const donateButtons = document.getElementsByClassName('donate-now');
 for (let i = 0; i < donateButtons.length; i++) {
   donateButtons[i].addEventListener('click', function (event) {
     event.preventDefault();
+
     const input = document.getElementsByClassName('input')[i];
     let inputValue = parseFloat(input.value);
     const cardElement = document.getElementsByClassName('card-value')[i];
@@ -40,21 +41,21 @@ for (let i = 0; i < donateButtons.length; i++) {
 
     const cardTitle = document.getElementsByTagName('span')[i].innerText;
 
-    if(inputValue!==isNaN && inputValue<mainBalance && inputValue>0) {
+    if (inputValue !== isNaN && inputValue < mainBalance && inputValue > 0) {
 
       mainBalance -= inputValue;
       cardBalance += inputValue;
-  
+
       mainBalanceElement.innerText = mainBalance;
       cardElement.innerText = cardBalance;
-  
+
       // history
       const historySec = document.getElementById('history');
       const currentDate = new Date();
       const formattedDate = currentDate.toLocaleString();
-  
+
       const div = document.createElement('div');
-      div.classList.add('max-w-screen-xl', 'mx-auto','mt-5');
+      div.classList.add('max-w-screen-xl', 'mx-auto', 'mt-5');
       div.innerHTML = `
         <div class="card bg-base-100 border border-[rgba(17,17,17,0.3)] px-3 py-5 mb-5">
           <div class="card-body">
@@ -64,11 +65,15 @@ for (let i = 0; i < donateButtons.length; i++) {
         </div>    
       `
       historySec.appendChild(div);
-      input.value = "";  
-    }
+      // modal
+      document.getElementById('my_modal_5').showModal();
+      document.getElementById('modal-close-btn').addEventListener('click', function () {
+        document.getElementById('my_modal_5').close();})
+        input.value = "";
+      }
     else {
-      alert('Invalid Output');
-    }
+          alert('Invalid Output');
+        }
     
   });
 }

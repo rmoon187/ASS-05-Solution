@@ -54,7 +54,7 @@
         <!-- donate cards -->
         <div id="donate" class="max-w-screen-xl mx-auto mt-10 mb-20 space-y-9">
             <!-- card1 -->
-            <div class="card lg:card-side bg-base-100  px-8    border border-[rgba(17,17,17,0.1)]">
+            <div class="card lg:card-side bg-base-100  px-8   border border-[rgba(17,17,17,0.1)]">
                 <figure>
                     <img class="" src="assets/noakhali.png" alt="Album" />
                 </figure>
@@ -132,11 +132,27 @@
                         Now</button>
                 </div>
             </div>
+
+            <!-- Open the modal using ID.showModal() method -->
+
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box text-center">
+                    <h3 class="text-5xl font-bold">congrats!</h3>
+                    <img class="mx-auto mt-3 w-12" src="assets/coin.png" alt="">
+                    <p class="py-4">You Have Donated for Humankind</p>
+                    <p class="font-bold text-2xl">Successfully</p>
+                    <div class="modal-action justify-center">
+
+                        <button class="btn" id="modal-close-btn">Close Information</button>
+
+                    </div>
+                </div>
+            </dialog>
         </div>
 
         <!-- history -->
         <section id="history" class=" hidden">
-            
+
         </section>
     </main>
     <footer class="bg-[rgb(249,247,243)] h-32">
