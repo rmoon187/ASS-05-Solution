@@ -8,24 +8,23 @@ window.addEventListener('scroll', () => {
   }
 });
 
-document.getElementById('btn-blog').addEventListener('click', function () {
+document.addEventListener('DOMContentLoaded', function() {
+  const blog = document.getElementById('btn-blog');
+  const home = document.getElementById('btn-home');
+  
+  if (blog) {
+      blog.addEventListener('click', function() {
+          window.location.href = 'blog.html';
+      });
+  }
 
-  window.location.href = "blog.html";
+  if (home) {
+      home.addEventListener('click', function() {
+          window.location.href = 'home.html';
+      });
+  }
 });
 
-document.getElementById('btn-home').addEventListener('click', function () {
-
-  window.location.href = "home.html";
-});
 
 
 
-
-document.getElementById('btn-history').addEventListener('click', function () {
-
-  const hisSec = document.getElementById('history');
-  hisSec.classList.remove('hidden')
-
-  const donateSec = document.getElementById('donate');
-  donateSec.classList.add('hidden')
-});

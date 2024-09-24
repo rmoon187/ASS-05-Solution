@@ -42,13 +42,13 @@
         </div>
         <!-- button -->
         <div class="text-center mt-20 space-x-5 ">
-            <button
-                class="btn bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] text-xl w-[200px] font-bold h-[60px] ">Donation</button>
+            <button id="btn-donate"
+                class="btn bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] text-xl w-[200px] font-bold h-[60px] " onclick="toggleButtons('btn-donate')">Donation</button>
             <button id="btn-history"
-                class="btn border border-[rgba(17,17,17,0.3)] bg-white hover:bg-[rgb(158,214,85)] text-xl w-[200px] font-bold h-[60px] text-[rgba(17,17,17,0.7)]">History</button>
+                class="btn border border-[rgba(17,17,17,0.3)] bg-white  text-xl w-[200px] font-bold h-[60px] text-[rgba(17,17,17,0.7)]" onclick="toggleButtons('btn-history')">History</button>
         </div>
     </header>
-    <main>
+    <main class="min-h-screen">
         <!-- donate cards -->
         <div id="donate" class="max-w-screen-xl mx-auto mt-10 mb-20 space-y-9">
             <!-- card1 -->
@@ -71,7 +71,7 @@
                         situation is urgent.Together, we can help rebuild lives and restore communities stronger than
                         ever.</p>
                     <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-                    <button
+                    <button id="donate-now"
                         class="btn btn-block bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] font-bold text-xl">Donate
                         Now</button>
                 </div>
@@ -98,7 +98,7 @@
                         hands in providing relief to those whose lives have been shattered by this natural disaster.
                     </p>
                     <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-                    <button
+                    <button id="donate-now"
                         class="btn btn-block bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] font-bold text-xl">Donate
                         Now</button>
                 </div>
@@ -125,7 +125,7 @@
                         impact on the lives of those who risked their safety for a fairer future. Together, we can
                         ensure that these individuals receive the care they need to recover fully.</p>
                     <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-                    <button
+                    <button id="donate-now"
                         class="btn btn-block bg-[rgb(180,244,97)] hover:bg-[rgb(158,214,85)] font-bold text-xl">Donate
                         Now</button>
                 </div>
@@ -133,13 +133,15 @@
         </div>
 
         <!-- history -->
-         <section id="history hidden">
-
-         </section>
+        <section id="history" class="text-center text-5xl hidden">
+            <h1>I am moon</h1>
+        </section>
     </main>
     <footer class="bg-[rgb(249,247,243)] h-32">
     </footer>
-    <script src="./JS/main.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/utilities.js"></script>
+    <script src="JS/features.js"></script>
 </body>
 
 </html>
