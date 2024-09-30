@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
       window.location.href = 'blog.html';
     });
   }
+  
 
   if (home) {
     home.addEventListener('click', function () {
